@@ -1,13 +1,4 @@
-name: ax360-frontend-dev           # Translates to a GCP Project 
-
-infraVersion: 0.1.x                # NEXT
-
-cidr: 10.0.10.0/16                 # CIDR of the subnet of the workload
-
-domain: frontend.ax360.ia-gcp.com  # Root CNAME for all workload deployed in the GCP project
-
-sharedVpc: ax360-dev               # Reference to the shared VPC
-
-regions:                           # Regions available for the workload
-- northamerica-northeast1
-- northamerica-northeast2
+project: ax360-frontend-dev            # Translates to a GCP Project 
+infraVersion: 0.1.x                    # NEXT
+domain: dev.frontend.ax360.ia-gcp.com  # Root CNAME for all workload deployed in the GCP project
+sharedVpc: ax360-dev                   # Reference to the shared VPC
