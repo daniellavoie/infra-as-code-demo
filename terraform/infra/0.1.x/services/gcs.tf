@@ -1,7 +1,7 @@
 resource "google_storage_bucket" "bucket" {
   name          = local.bucket_name
   location      = "US"
-  force_destroy = true
+  force_destroy = false
 }
 
 locals {
