@@ -13,3 +13,8 @@ variable "project_name" {
   description = "The display name of the gcp project"
   type        = string
 }
+
+variable "terraform_roles" {
+  description = "IAM roles to assign to the terraform service account"
+  type        = list(string)
+}

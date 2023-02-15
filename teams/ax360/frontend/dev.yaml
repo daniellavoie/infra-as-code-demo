@@ -3,4 +3,49 @@ terraformVars:
   project_id: platform-demo-377915
   project_name: platform-demo
   project_folder_id: 273732920377
-  
+  terraform_roles:
+  - roles/storage.admin
+  apis:
+  - appengine.googleapis.com 
+  - apigateway.googleapis.com 
+  - artifactregistry.googleapis.com 
+  - bigquery.googleapis.com 
+  - bigquerymigration.googleapis.com 
+  - bigquerystorage.googleapis.com 
+  - billingbudgets.googleapis.com 
+  - cloudbuild.googleapis.com 
+  - clouddebugger.googleapis.com 
+  - cloudfunctions.googleapis.com 
+  - cloudresourcemanager.googleapis.com 
+  - cloudtrace.googleapis.com 
+  - compute.googleapis.com 
+  - containerregistry.googleapis.com 
+  - datastore.googleapis.com 
+  - endpoints.googleapis.com 
+  - fcm.googleapis.com 
+  - fcmregistrations.googleapis.com 
+  - firebase.googleapis.com 
+  - firebaseappdistribution.googleapis.com 
+  - firebasedynamiclinks.googleapis.com 
+  - firebaseinstallations.googleapis.com 
+  - firebaseremoteconfig.googleapis.com 
+  - firebaserules.googleapis.com 
+  - firestore.googleapis.com
+  - identitytoolkit.googleapis.com 
+  - logging.googleapis.com 
+  - mobilecrashreporting.googleapis.com 
+  - monitoring.googleapis.com 
+  - oslogin.googleapis.com 
+  - pubsub.googleapis.com
+  - run.googleapis.com
+  - runtimeconfig.googleapis.com
+  - securetoken.googleapis.com
+  - servicecontrol.googleapis.com
+  - servicemanagement.googleapis.com
+  - serviceusage.googleapis.com
+  - sourcerepo.googleapis.com
+  - sql-component.googleapis.com
+  - storage-api.googleapis.com
+  - storage-component.googleapis.com
+  - storage.googleapis.com
+  - testing.googleapis.com
