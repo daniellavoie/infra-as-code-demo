@@ -4,6 +4,11 @@ variable "project_folder_id" {
   type        = string
 }
 
+variable "project_billing_account_id" {
+  description = "The name of the billing account."
+  type        = string
+}
+
 variable "project_id" {
   description = "The gcp project ID. Changing this forces a new project to be created."
   type        = string
