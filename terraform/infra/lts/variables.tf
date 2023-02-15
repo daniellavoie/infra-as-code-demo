@@ -18,3 +18,9 @@ variable "terraform_roles" {
   description = "IAM roles to assign to the terraform service account"
   type        = list(string)
 }
+
+
+variable "apis" {
+  description = "The services to enable"
+  type        = list(string)
+}

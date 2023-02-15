@@ -11,7 +11,7 @@ resource "google_project_service" "project_services" {
 }
 
 locals {
-  apis       = var.apis
+  apis           = var.apis
   project_folder = var.project_folder_id
   project_id     = var.project_id
   project_name   = var.project_name
