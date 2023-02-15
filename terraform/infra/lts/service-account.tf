@@ -2,7 +2,7 @@ data "google_iam_policy" "policies" {
   for_each = toset(var.terraform_roles)
 
   binding {
-    role = value.key
+    role = each.key
 
     members = [
       "serviceAccount:${google_service_account.service_account.email}",
