@@ -1,5 +1,5 @@
-infraBaseline: next                      # next
-terraformVars:                           # Terraform variables
-  project: ax360-frontend-dev            # Translates to a GCP Project 
-  domain: dev.frontend.ax360.ia-gcp.com  # Root CNAME for all workload deployed in the GCP project
-  sharedVpc: ax360-dev                   # Reference to the shared VPC
+infraBaseline: lts
+terraformVars:
+  project_id: platform-demo-377915
+  project_name: platform-demo
+  project_folder_id: 273732920377
