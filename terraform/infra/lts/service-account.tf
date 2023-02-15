@@ -12,6 +12,7 @@ data "google_iam_policy" "policies" {
 
 resource "google_service_account" "service_account" {
   account_id   = "terraform"
+  project_id   = local.project_id
   display_name = "Terraform Service Account"
 }
 
@@ -28,5 +29,6 @@ resource "google_service_account_key" "service_account" {
 }
 
 locals {
-  roles = var.terraform_roles
+  project_id = var.project_id
+  roles      = var.terraform_roles
 }
