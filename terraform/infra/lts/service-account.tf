@@ -29,6 +29,5 @@ resource "google_service_account_key" "service_account" {
 }
 
 locals {
-  project_id = var.project_id
   roles      = var.terraform_roles
 }
