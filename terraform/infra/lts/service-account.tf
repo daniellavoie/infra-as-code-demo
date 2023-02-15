@@ -12,7 +12,7 @@ data "google_iam_policy" "policies" {
 
 resource "google_service_account" "service_account" {
   account_id   = "terraform"
-  project_id   = local.project_id
+  project   = local.project_id
   display_name = "Terraform Service Account"
 }
 
