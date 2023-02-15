@@ -19,7 +19,7 @@ resource "google_service_account_iam_policy" "service_account" {
   for_each = data.google_iam_policy.policies
 
   service_account_id = google_service_account.service_account.name
-  policy_data        = each.value
+  policy_data        = each.value.policy_data
 }
 
 resource "google_service_account_key" "service_account" {
