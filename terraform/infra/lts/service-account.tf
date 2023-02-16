@@ -1,8 +1,8 @@
 data "google_iam_policy" "policies" {
-  for_each = toset(var.terraform_roles)
 
   binding {
-    role = each.key
+    for_each = toset(var.terraform_roles)
+    role     = each.key
 
     members = [
       "serviceAccount:${google_service_account.service_account.email}",
@@ -12,15 +12,13 @@ data "google_iam_policy" "policies" {
 
 resource "google_service_account" "service_account" {
   account_id   = "terraform"
-  project   = local.project_id
+  project      = local.project_id
   display_name = "Terraform Service Account"
 }
 
 resource "google_service_account_iam_policy" "service_account" {
-  for_each = data.google_iam_policy.policies
-
   service_account_id = google_service_account.service_account.name
-  policy_data        = each.value.policy_data
+  policy_data        = data.google_iam_policy.policy_data
 }
 
 resource "google_service_account_key" "service_account" {
@@ -29,5 +27,5 @@ resource "google_service_account_key" "service_account" {
 }
 
 locals {
-  roles      = var.terraform_roles
+  roles = var.terraform_roles
 }
