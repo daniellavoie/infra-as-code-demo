@@ -10,7 +10,7 @@ data "google_iam_policy" "policies" {
   }
 }
 
-resource "google_service_account" "service_account" {
+resource "google_project_iam_member" "service_account" {
   account_id   = "terraform"
   project      = google_project.project.id
   display_name = "Terraform Service Account"
