@@ -1,13 +1,13 @@
 resource "google_service_account" "service_account" {
   account_id   = "terraform"
-  project      = google_project.project.id
+  project      = local.project_id
   display_name = "Terraform Service Account"
 }
 
 resource "google_project_iam_member" "service_account" {
   for_each = toset(var.terraform_roles)
 
-  project = google_project.project.id
+  project = google_project.project.project_id
   role    = each.key
   member  = "serviceAccount:${google_service_account.service_account.email}"
 }
