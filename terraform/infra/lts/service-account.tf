@@ -1,15 +1,3 @@
-data "google_iam_policy" "policies" {
-  for_each = toset(var.terraform_roles)
-
-  binding {
-    role = each.key
-
-    members = [
-      "serviceAccount:${google_service_account.service_account.email}",
-    ]
-  }
-}
-
 resource "google_service_account" "service_account" {
   account_id   = "terraform"
   project      = google_project.project.id
