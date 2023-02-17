@@ -9,6 +9,8 @@ resource "google_project_service" "project_services" {
   for_each = toset(local.apis)
   project  = local.project_id
   service  = each.key
+
+  depends_on = [google_project.project]
 }
 
 locals {
