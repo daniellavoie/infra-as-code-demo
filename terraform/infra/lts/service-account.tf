@@ -3,7 +3,7 @@ resource "google_service_account" "service_account" {
   project      = local.project_id
   display_name = "Terraform Service Account"
 
-  depends_on = concat(google_project_service.project_services, [google_project.project])
+  depends_on = [google_project.project]
 }
 
 resource "google_project_iam_member" "service_account" {
